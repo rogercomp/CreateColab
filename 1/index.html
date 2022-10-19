@@ -1,0 +1,168 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Como criar colabs</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="Google Analytics ID"
+                  id="1"
+                  title="Como criar colabs"
+                  environment="web"
+                  feedback-link="https://github.com/rogercomp">
+    
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p>Você está tentando criar conteúdo fácil de usar e visualmente atraente para a comunidade de tecnologia? Este CodeLab mostrará como criar rapidamente seu próprio Google CodeLab, exatamente como o que você está usando agora. Ao criar um Codelab você tem duas opções de autoria:</p>
+<p>Usando um Documento Google Usando um arquivo de remarcação(markdown)</p>
+<p>Neste codelab vou usar a segunda opção e criar o codelab usando um arquivo markdown. Isso dá a flexibilidade de usar nosso arquivo markdown para outras coisas e também armazená-lo em nosso repositório do github com qualquer código que possa ser usado para um tutorial.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuração do Ambiente" duration="0">
+        <p>Para criar um CodeLab, você precisa do Go e do claat (a ferramenta de linha de comando do codelabs) instalados.</p>
+<p>As instruções abaixo são o que funcionou para mim no Windows:</p>
+<ul>
+<li><a href="https://go.dev/dl/" target="_blank">GO</a></li>
+</ul>
+<p>Após a instalação do GO abra um cmd e digite: go version</p>
+<p>caso ele traga as informações da versão instalada siga o passo abaixo</p>
+<ul>
+<li>Claat =&gt; Dentro do CLI do GO digite: go install github.com/googlecodelabs/tools/claat@latest</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Criando um Colab" duration="0">
+        <p>Usando um editor de markdown de sua preferência, edite o texto conforme deseje:</p>
+<h2 is-upgraded>Header Metadata</h2>
+<pre><code>Os metadados consistem em pares de valores-chave no formato &#34;chave: valor&#34;  
+
+author  -  Nome do autor do colab
+summary -  Um resumo legível do codelab. O padrão é em branco.
+id - Um identificador composto por letras minúsculas que descrevem idealmente 
+     o conteúdo do codelab. Este campo deve ser único entre codelabs.
+categories - Uma lista separada por vírgulas dos tópicos abordados pelo codelab.
+environments - Uma lista de ambientes nos quais o codelab deve ser descoberto. 
+               Os codelabs marcados como &#34;Web&#34; ficarão visíveis no índice de 
+               codelabs. Codelabs marcados &#34;Kiosk&#34; estará disponível apenas 
+               nos quiosques da codelabs, que possuem equipamento anexado.
+status - O status de publicação do codelab. Os valores válidos são:
+         Draft: Codelab não está concluído.
+         Published: Codelab finalizado e visível.
+         Deprecated: o Codelab é considerado obsoleto e não deve ser 
+                     amplamente divulgado. 
+         Hidden: Codelab não é mostrado no índice.	
+Feedback Link - Um link para enviar aos usuários se quiserem deixar 
+                comentários sobre o codelab.
+Analytics Account: um ID do Google Analytics para incluir em todas 
+                   as páginas do codelab
+</code></pre>
+<h2 is-upgraded>Adicionando Título</h2>
+<pre><code>Para adicionar um título use o caracter &#39;#&#39;	
+</code></pre>
+<h2 is-upgraded>Adicionando Seção e Duration</h2>
+<pre><code>Em seguida, para cada section, use o Header 2 ou &#39;##&#39; e especifique uma duração 
+opcional abaixo para cálculos de tempo restante. Os tempos de section opcionais 
+serão usados para totalizar automaticamente e os tempos restantes do tutorial
+No markdown, a hora está formatada hh:mm:ss	   
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Exportar e Testar" duration="0">
+        <p>Abra um cmd e execute as instruções abaixo:</p>
+<ul>
+<li>claat export nomecodelab.md</li>
+<li>claat serve</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Resumo Markdown" duration="0">
+        <h3 is-upgraded>Ênfase</h3>
+<pre><code>  Para adicionar ênfase ao contéudo a ser escrito usa-se:
+  
+  * Negrito: adicione 2 asteriscos **texto** ou 2 traços baixos __texto__	  
+  
+  * Itálico: adicione apenas um asterisco *texto* um traço baixo _texto_
+  
+  Para adicionar lista de itens usa-se:
+  
+  * Não ordenadas: utilize um asterisco com espaço na frente do item
+    * item 1
+	* item 2
+	* item 3
+	
+  * Lista ordenada: utilize o número do item seguindo do ponto(.)
+    1. item 1
+	2. item 2
+	3. item 3
+	
+  Para adicionar imagens usa-se:
+  
+  * ![titulo](URL da imagem)
+  
+  Para adicionar citação usa-se:
+  
+  * Utilize o sinal &gt; no início da linha que será formatada
+  
+  Para adionar tabela usa-se:
+  
+  * Escolha os titulos das colunas e use | para delimitação, depois 
+    utilize o hífen na segunda linha para indicar que acima estãos os titulos
+	novamente o hifen para delimitação
+	### Exemplo
+	
+	Exemplo | Valor
+	-----------------
+	Ex 1    | R$ 10
+	Ex 2    | R$ 12
+	Ex 3    | R$ 5 
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Hospede seu colab" duration="0">
+        <p>Servidor utilizado: <a href="https://app.netlify.com" target="_blank">Netlify</a></p>
+<ol type="1">
+<li>Cria uma conta na Netlify para publicação</li>
+<li>Procure a opção <strong>Add new site</strong><img alt="Add New Site" src="img\\7b049b80b40d0940.png"></li>
+<li>Depois selecione a opção <strong>Deploy manually</strong><img alt="Deploy Manually" src="img\\b5921f85f3e05e8a.png"></li>
+<li>Na opção <strong>browse to upload</strong> aponte para a pasta do colab construído <img alt="browsetoupload" src="img\\7ec497193fc09af4.png"></li>
+<li>Espere terminar o upload, caso queira mude o nome do site na opção Site Settings &gt; Change Site Name e coloque o nome do site<br><img alt="sitesettings" src="img\\3e75caf6fc38c84f.png"><img alt="changesitename" src="img\\86f54c1ad0a8321f.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
